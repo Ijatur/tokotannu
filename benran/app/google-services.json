@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298935041342",
+    "project_id": "toko-zakaria-5ecd7",
+    "storage_bucket": "toko-zakaria-5ecd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298935041342:android:507030c5055ca938a0c06f",
+        "android_client_info": {
+          "package_name": "com.example.tokozakaria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298935041342-3rdukemqqorb1ksu3q8ikjiggsi97hk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrRFcSHLsuQyAEnCRna_UUkvGyjNpmq5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298935041342-3rdukemqqorb1ksu3q8ikjiggsi97hk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
