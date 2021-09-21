@@ -20,6 +20,21 @@ public class MainActivity extends AppCompatActivity {
         penjualan = findViewById(R.id.penjualan);
         keuntungan = findViewById(R.id.keuntungan);
 
+        barang.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), Barang.class);
+            startActivity(intent);
+        });
+
+        penjualan.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), Penjualan.class);
+            startActivity(intent);
+        });
+
+        keuntungan.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), Keuntungan.class);
+            startActivity(intent);
+        });
+
     }
 
 }
