@@ -9,6 +9,17 @@ public class Requests {
     public String supplier;
     public String email;
 
+
+    public Requests(){}
+    public Requests(String nama, String harga, String stock, String supplier, String email){
+        this.nama = nama;
+        this.harga = harga;
+        this.stock = stock;
+        this.supplier = supplier;
+        this.email = email;
+
+    }
+
     public String getSold() {
         return sold;
     }
@@ -64,4 +75,14 @@ public class Requests {
     public void setEmail(String email) {
         this.email = email;
     }
+    @Override
+    public String toString()
+    {
+        return ""+nama+"\n"+
+                ""+harga+"\n"+
+                ""+stock+"\n"+
+                ""+supplier+"\n"+
+                ""+email+"\n";
+    }
+
 }
