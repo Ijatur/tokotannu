@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TokoZakaria">
         <activity
+            android:name=".Tambah_Barang"
+            android:exported="true" />
+        <activity
+            android:name=".Keuntungan"
+            android:exported="true" />
+        <activity
+            android:name=".Penjualan"
+            android:exported="true" />
+        <activity
+            android:name=".Barang"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
