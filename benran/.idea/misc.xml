@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/drawable/jualan.xml" value="0.2786458333333333" />
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/drawable/product.xml" value="0.2786458333333333" />
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/activity_barang.xml" value="0.13541666666666666" />
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/activity_main.xml" value="0.13903985507246377" />
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/activity_tambah_barang.xml" value="0.264" />
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/coba.xml" value="0.2504528985507246" />
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/menu/barang_appbar.xml" value="0.2625" />
+        <entry key="..\:/Magang/tannu/benran/app/src/main/res/menu/main.xml" value="0.2625" />
         <entry key="..\:/Project/collab/benran/app/src/main/res/drawable/button_oval_background.xml" value="0.11041666666666666" />
         <entry key="..\:/Project/collab/benran/app/src/main/res/drawable/button_rectangle_background.xml" value="0.11041666666666666" />
         <entry key="..\:/Project/collab/benran/app/src/main/res/drawable/ic_add_white_24dp.xml" value="0.15185185185185185" />

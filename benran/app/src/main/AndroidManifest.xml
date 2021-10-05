@@ -11,18 +11,23 @@
         android:theme="@style/Theme.TokoZakaria">
         <activity
             android:name=".Tambah_Barang"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Barang"/>
         <activity
             android:name=".Keuntungan"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Penjualan"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Barang"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
+            android:theme="@style/Theme.TokoZakaria.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

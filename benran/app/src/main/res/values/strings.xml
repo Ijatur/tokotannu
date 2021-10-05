@@ -3,7 +3,7 @@
     <string name="nama_toko">Toko Zakaria</string>
     <string name="barang">Barang</string>
     <string name="keuntungan">Keuntungan</string>
-    <string name="penjualan">Penjualan</string>
+    <string name="Kasir">Kasir</string>
     <string name="title_activity_barang">Barang</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -13,4 +13,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="nama_barang">Nama Barang</string>
+    <string name="harga">Harga</string>
+    <string name="stock">Stock</string>
+    <string name="submit">SUBMIT</string>
+    <string name="supplier_information">Supplier Information</string>
+    <string name="nama_supplier">Nama Supplier</string>
+    <string name="emailatauhp">Email/No.Hp</string>
 </resources>

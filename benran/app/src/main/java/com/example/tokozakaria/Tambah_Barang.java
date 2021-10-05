@@ -1,6 +1,7 @@
 package com.example.tokozakaria;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -24,16 +25,19 @@ public class Tambah_Barang extends AppCompatActivity {
 
     Requests req = new Requests();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tambah_barang);
 
+        /*Set ActionBar*/
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Tambah Barang");
+
         nama =(EditText) findViewById(R.id.nama_barang);
         harga =(EditText) findViewById(R.id.harga_barang);
         stock =(EditText) findViewById(R.id.stok_barang);
-        sold =(EditText) findViewById(R.id.sold_barang);
+        /*sold =(EditText) findViewById(R.id.sold_barang);*/
         supplier =(EditText) findViewById(R.id.supplier);
         email =(EditText) findViewById(R.id.email_address);
         final Button submit = (Button) findViewById(R.id.submit);
@@ -44,7 +48,7 @@ public class Tambah_Barang extends AppCompatActivity {
                 String sNama = nama.getText().toString();
                 String sHarga = harga.getText().toString();
                 String sStock = stock.getText().toString();
-                String sSold = sold.getText().toString();
+                /*String sSold = sold.getText().toString();*/
                 String sSupplier = supplier.getText().toString();
                 String sEmail = email.getText().toString();
 

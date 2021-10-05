@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/beras"
+        android:title="Beras"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/minyak"
+        android:title="Minyak"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/sagu"
+        android:title="Sagu"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/gula"
+        android:title="Gula"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/terigu"
+        android:title="Terigu"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/lainnya"
+        android:title="Lainnya"
+        app:showAsAction="never"/>
+
+    <!--<item
+        android:id="@+id/cari"
+        android:title="Terigu"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_search_24"/>-->
+
+</menu>

@@ -1,15 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="9"
+    android:orientation="vertical"
     tools:context=".Tambah_Barang">
 
-
+    <!--Layout bagian atas//kalo mau diganti proporsi pake weight
+    Default 3.5-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:orientation="horizontal">
+
+        <!--Container Upload foto-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_image_upload" />
+
+            <Button
+                android:id="@+id/action_image_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_rectangle_background"
+                android:text="Upload" />
+
+        </LinearLayout>
+        <!--Container upload foto selesai-->
+
+        <!--Container TextField-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Judul-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Product Detail"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <!--Nama Barang-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="2dp"
+                android:layout_weight="4"
+                android:hint="@string/nama_barang">
+
+                <EditText
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/nama_barang"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Nama Barang Selesai-->
+
+            <!--Harga-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="2dp"
+                android:layout_weight="4"
+                android:hint="@string/harga">
+
+                <EditText
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    android:id="@+id/harga_barang"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Harga Selesai-->
+
+            <!--Stock-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="2dp"
+                android:layout_weight="4"
+                android:hint="@string/stock">
+
+                <EditText
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    android:id="@+id/stok_barang"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Stock Selesai-->
+
+        </LinearLayout>
+        <!--Container Text selesai-->
+
+    </LinearLayout>
+    <!--Layout bagian atas selesai-->
+
+    <!--Layout bagian tengah//kalo mau diganti proporsi pake weight
+    Default 4.5-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
+        android:orientation="vertical">
+
+        <!--Judul-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/supplier_information"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!--Nama Supplier-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/nama_supplier">
+
+            <EditText
+                android:id="@+id/supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:capitalize="words"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Nama Supplier Selesai-->
+
+        <!--Email/No.Hp-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/emailatauhp">
+
+            <EditText
+                android:id="@+id/email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Email/No.Hp Selesai-->
+
+    </LinearLayout>
+    <!--Layout bagian tengah selesai-->
+
+    <!--Layout bagian bawah//kalo mau diganti proporsi pake weight
+    Default 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:text="@string/submit"/>
+
+    </LinearLayout>
+    <!--Layout bagian bawah selesai-->
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:focusedByDefault="true"
@@ -45,7 +252,6 @@
                     android:text="Upload" />
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -115,64 +321,19 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginBottom="4dp"
-                        android:layout_weight="2"
-                        android:orientation="vertical">
-
-                        <ImageButton
-                            android:id="@+id/action_add_quantity_in_stock"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:background="@drawable/button_oval_background"
-                            android:src="@drawable/ic_arrow_drop_up_black_24dp"
-                            app:tint="@android:color/white" />
-
-                        <ImageButton
-                            android:id="@+id/action_remove_quantity_in_stock"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@drawable/button_oval_background"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"
-                            app:tint="@android:color/white" />
-
-                    </LinearLayout>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginEnd="16dp"
-                        android:layout_weight="3"
-                        android:hint="Sold">
-
-                        <EditText
-                            android:id="@+id/sold_barang"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:enabled="false"
-                            android:inputType="number"
-                            android:textAlignment="center"
-                            tools:text="0" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="24dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Supplier Information"
             android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -212,26 +373,21 @@
                 tools:text="paulmoret@furniture.wood" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_weight="9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="50dp"
+                android:text="SUBMIT" />
 
         </LinearLayout>
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="420dp"
-            android:layout_height="70dp"
-            android:text="SUBMIT"
-            android:layout_marginTop="120dp"
-            />
-    </LinearLayout>
 
+    </LinearLayout>-->
 
-</ScrollView>
+</LinearLayout>
