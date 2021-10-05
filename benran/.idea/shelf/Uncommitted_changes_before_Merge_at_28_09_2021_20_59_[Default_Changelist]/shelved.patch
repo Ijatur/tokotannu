@@ -1,0 +1,338 @@
+Index: app/src/main/res/layout/activity_barang.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Barang\">\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_barang.xml b/app/src/main/res/layout/activity_barang.xml
+--- a/app/src/main/res/layout/activity_barang.xml	
++++ b/app/src/main/res/layout/activity_barang.xml	
+@@ -1,9 +1,52 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<RelativeLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".Barang">
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        android:padding="10dp">
++
++        <ImageView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:src="@drawable/ic_baseline_arrow_back_24" />
++
++        <TextView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="@string/barang"
++            android:layout_weight="0.5"
++            android:textAlignment="center"
++            android:textColor="@color/black"
++            android:textSize="30sp"
++            android:textStyle="bold" />
++
++        <!--Gambar biar rata-->
++        <ImageView
++            android:alpha="0"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:src="@drawable/ic_baseline_arrow_back_24"
++            />
++
++    </LinearLayout>
++
++    <com.google.android.material.floatingactionbutton.FloatingActionButton
++        android:id="@+id/buttonfloating"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:src="@drawable/ic_add"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentBottom="true"
++        android:contentDescription="@string/tambah"
++        android:layout_margin="16dp" />
++
++
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    tools:context=\".MainActivity\">\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"@drawable/bg\"\r\n        android:orientation=\"vertical\">\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_margin=\"42sp\"\r\n            android:text=\"@string/nama_toko\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"@color/white\"\r\n            android:textSize=\"37sp\"></TextView>\r\n\r\n        <GridLayout\r\n            android:id=\"@+id/main_grid\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_margin=\"9dp\"\r\n            android:columnCount=\"2\"\r\n            android:rowCount=\"@integer/material_motion_duration_long_2\">\r\n\r\n            <androidx.cardview.widget.CardView\r\n                android:id=\"@+id/barang\"\r\n                android:layout_margin=\"15dp\"\r\n                app:cardCornerRadius=\"8dp\"\r\n                app:cardElevation=\"8dp\">\r\n\r\n                <LinearLayout\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:orientation=\"vertical\"\r\n                    android:layout_margin=\"10dp\"\r\n                    android:padding=\"26dp\"\r\n                    android:textAlignment=\"center\">\r\n\r\n                    <ImageView\r\n                        android:layout_width=\"90dp\"\r\n                        android:layout_height=\"90dp\"\r\n                        android:contentDescription=\"Barang\"\r\n                        android:src=\"@drawable/product\"\r\n                        android:layout_gravity=\"center\"/>\r\n\r\n                    <TextView\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:text=\"@string/barang\"\r\n                        android:textAlignment=\"center\"\r\n                        android:textColor=\"@color/black\"\r\n                        android:textSize=\"20sp\"\r\n                        android:textStyle=\"bold\" />\r\n\r\n                </LinearLayout>\r\n\r\n            </androidx.cardview.widget.CardView>\r\n\r\n            <androidx.cardview.widget.CardView\r\n                android:id=\"@+id/keuntungan\"\r\n                android:layout_margin=\"15dp\"\r\n                app:cardCornerRadius=\"8dp\"\r\n                app:cardElevation=\"8dp\">\r\n\r\n                <LinearLayout\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_margin=\"10dp\"\r\n                    android:padding=\"26dp\"\r\n                    android:orientation=\"vertical\">\r\n\r\n                    <ImageView\r\n                        android:layout_width=\"100dp\"\r\n                        android:layout_height=\"90dp\"\r\n                        android:contentDescription=\"Keuntungan\"\r\n                        android:src=\"@drawable/profit\"\r\n                        android:layout_gravity=\"center\"/>\r\n\r\n                    <TextView\r\n                        android:layout_width=\"wrap_content\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:text=\"@string/keuntungan\"\r\n                        android:textAlignment=\"center\"\r\n                        android:textColor=\"@color/black\"\r\n                        android:textSize=\"20sp\"\r\n                        android:textStyle=\"bold\" />\r\n\r\n                </LinearLayout>\r\n\r\n            </androidx.cardview.widget.CardView>\r\n\r\n            <androidx.cardview.widget.CardView\r\n                android:id=\"@+id/penjualan\"\r\n                android:layout_margin=\"15dp\"\r\n                app:cardCornerRadius=\"8dp\"\r\n                app:cardElevation=\"8dp\">\r\n\r\n                <LinearLayout\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_margin=\"10dp\"\r\n                    android:orientation=\"vertical\"\r\n                    android:padding=\"26dp\">\r\n\r\n                    <ImageView\r\n                        android:layout_width=\"90dp\"\r\n                        android:layout_height=\"90dp\"\r\n                        android:contentDescription=\"Penjualan\"\r\n                        android:src=\"@drawable/jualan\"\r\n                        android:layout_gravity=\"center\"/>\r\n\r\n                    <TextView\r\n                        android:layout_width=\"wrap_content\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:text=\"@string/penjualan\"\r\n                        android:textAlignment=\"center\"\r\n                        android:textColor=\"@color/black\"\r\n                        android:textSize=\"20sp\"\r\n                        android:textStyle=\"bold\" />\r\n\r\n                </LinearLayout>\r\n\r\n            </androidx.cardview.widget.CardView>\r\n\r\n        </GridLayout>\r\n\r\n    </LinearLayout>\r\n\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	
++++ b/app/src/main/res/layout/activity_main.xml	
+@@ -6,12 +6,14 @@
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     tools:context=".MainActivity">
+ 
++    <!--layout utama-->
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/bg"
+         android:orientation="vertical">
+ 
++        <!--judul-->
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+@@ -19,12 +21,13 @@
+             android:text="@string/nama_toko"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+-            android:textSize="37sp"></TextView>
++            android:textSize="37sp"/>
+ 
+         <GridLayout
+             android:id="@+id/main_grid"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
++            android:layout_gravity="center"
+             android:layout_margin="9dp"
+             android:columnCount="2"
+             android:rowCount="@integer/material_motion_duration_long_2">
+@@ -38,17 +41,17 @@
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+-                    android:orientation="vertical"
+                     android:layout_margin="10dp"
+-                    android:padding="26dp"
++                    android:orientation="vertical"
++                    android:padding="20dp"
+                     android:textAlignment="center">
+ 
+                     <ImageView
+                         android:layout_width="90dp"
+                         android:layout_height="90dp"
+-                        android:contentDescription="Barang"
+-                        android:src="@drawable/product"
+-                        android:layout_gravity="center"/>
++                        android:layout_gravity="center"
++                        android:contentDescription="@string/barang"
++                        android:src="@drawable/product" />
+ 
+                     <TextView
+                         android:layout_width="match_parent"
+@@ -73,15 +76,15 @@
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp"
+-                    android:padding="26dp"
+-                    android:orientation="vertical">
++                    android:orientation="vertical"
++                    android:padding="20dp">
+ 
+                     <ImageView
+                         android:layout_width="100dp"
+                         android:layout_height="90dp"
+-                        android:contentDescription="Keuntungan"
+-                        android:src="@drawable/profit"
+-                        android:layout_gravity="center"/>
++                        android:layout_gravity="center"
++                        android:contentDescription="@string/keuntungan"
++                        android:src="@drawable/profit"/>
+ 
+                     <TextView
+                         android:layout_width="wrap_content"
+@@ -97,7 +100,7 @@
+             </androidx.cardview.widget.CardView>
+ 
+             <androidx.cardview.widget.CardView
+-                android:id="@+id/penjualan"
++                android:id="@+id/kasir"
+                 android:layout_margin="15dp"
+                 app:cardCornerRadius="8dp"
+                 app:cardElevation="8dp">
+@@ -107,19 +110,19 @@
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp"
+                     android:orientation="vertical"
+-                    android:padding="26dp">
++                    android:padding="20dp">
+ 
+                     <ImageView
+                         android:layout_width="90dp"
+                         android:layout_height="90dp"
+-                        android:contentDescription="Penjualan"
+-                        android:src="@drawable/jualan"
+-                        android:layout_gravity="center"/>
++                        android:layout_gravity="center"
++                        android:contentDescription="@string/kasir"
++                        android:src="@drawable/jualan" />
+ 
+                     <TextView
+-                        android:layout_width="wrap_content"
++                        android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+-                        android:text="@string/penjualan"
++                        android:text="@string/kasir"
+                         android:textAlignment="center"
+                         android:textColor="@color/black"
+                         android:textSize="20sp"
+Index: app/src/main/java/com/example/tokozakaria/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.tokozakaria;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.cardview.widget.CardView;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    public CardView barang,penjualan,keuntungan;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        barang = findViewById(R.id.barang);\r\n        penjualan = findViewById(R.id.penjualan);\r\n        keuntungan = findViewById(R.id.keuntungan);\r\n\r\n        barang.setOnClickListener(view -> {\r\n            Intent intent = new Intent(getApplicationContext(), Barang.class);\r\n            startActivity(intent);\r\n        });\r\n\r\n        penjualan.setOnClickListener(view -> {\r\n            Intent intent = new Intent(getApplicationContext(), Penjualan.class);\r\n            startActivity(intent);\r\n        });\r\n\r\n        keuntungan.setOnClickListener(view -> {\r\n            Intent intent = new Intent(getApplicationContext(), Keuntungan.class);\r\n            startActivity(intent);\r\n        });\r\n\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/tokozakaria/MainActivity.java b/app/src/main/java/com/example/tokozakaria/MainActivity.java
+--- a/app/src/main/java/com/example/tokozakaria/MainActivity.java	
++++ b/app/src/main/java/com/example/tokozakaria/MainActivity.java	
+@@ -9,7 +9,7 @@
+ 
+ public class MainActivity extends AppCompatActivity {
+ 
+-    public CardView barang,penjualan,keuntungan;
++    public CardView barang,kasir,keuntungan;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+@@ -17,7 +17,7 @@
+         setContentView(R.layout.activity_main);
+ 
+         barang = findViewById(R.id.barang);
+-        penjualan = findViewById(R.id.penjualan);
++        kasir = findViewById(R.id.kasir);
+         keuntungan = findViewById(R.id.keuntungan);
+ 
+         barang.setOnClickListener(view -> {
+@@ -25,7 +25,7 @@
+             startActivity(intent);
+         });
+ 
+-        penjualan.setOnClickListener(view -> {
++        kasir.setOnClickListener(view -> {
+             Intent intent = new Intent(getApplicationContext(), Penjualan.class);
+             startActivity(intent);
+         });
+Index: app/src/main/res/drawable/ic_add.xml
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_add.xml b/app/src/main/res/drawable/ic_add.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/ic_add.xml	
+@@ -0,0 +1,10 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="30dp"
++    android:height="30dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="?attr/colorControlNormal">
++  <path
++      android:fillColor="@android:color/white"
++      android:pathData="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
++</vector>
+Index: app/src/main/java/com/example/tokozakaria/AddBarang.java
+===================================================================
+diff --git a/app/src/main/java/com/example/tokozakaria/AddBarang.java b/app/src/main/java/com/example/tokozakaria/AddBarang.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/tokozakaria/AddBarang.java	
+@@ -0,0 +1,14 @@
++package com.example.tokozakaria;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class AddBarang extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_add_barang);
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_add_barang.xml
+===================================================================
+diff --git a/app/src/main/res/layout/activity_add_barang.xml b/app/src/main/res/layout/activity_add_barang.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_add_barang.xml	
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".AddBarang">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.tokozakaria\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.TokoZakaria\">\r\n        <activity\r\n            android:name=\".Keuntungan\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".Penjualan\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".Barang\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -10,6 +10,9 @@
+         android:supportsRtl="true"
+         android:theme="@style/Theme.TokoZakaria">
+         <activity
++            android:name=".AddBarang"
++            android:exported="true" />
++        <activity
+             android:name=".Keuntungan"
+             android:exported="true" />
+         <activity
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Magang/tannu/benran/app/src/main/res/drawable/product.xml\" value=\"0.2740740740740741\" />\r\n        <entry key=\"..\\:/Magang/tannu/benran/app/src/main/res/drawable/profit.xml\" value=\"0.2740740740740741\" />\r\n        <entry key=\"..\\:/Magang/tannu/benran/app/src/main/res/layout/activity_barang.xml\" value=\"0.2484375\" />\r\n        <entry key=\"..\\:/Magang/tannu/benran/app/src/main/res/layout/activity_main.xml\" value=\"0.2\" />\r\n        <entry key=\"..\\:/Magang/tannu/benran/app/src/main/res/layout/activity_penjualan.xml\" value=\"0.2625\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -3,8 +3,11 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
++        <entry key="..\:/Magang/tannu/benran/app/src/main/res/drawable/ic_add.xml" value="0.2786458333333333" />
++        <entry key="..\:/Magang/tannu/benran/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2786458333333333" />
+         <entry key="..\:/Magang/tannu/benran/app/src/main/res/drawable/product.xml" value="0.2740740740740741" />
+         <entry key="..\:/Magang/tannu/benran/app/src/main/res/drawable/profit.xml" value="0.2740740740740741" />
++        <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/activity_add_barang.xml" value="0.2625" />
+         <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/activity_barang.xml" value="0.2484375" />
+         <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/activity_main.xml" value="0.2" />
+         <entry key="..\:/Magang/tannu/benran/app/src/main/res/layout/activity_penjualan.xml" value="0.2625" />
+Index: app/src/main/res/drawable/ic_baseline_arrow_back_24.xml
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml b/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml	
+@@ -0,0 +1,10 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="40sp"
++    android:height="40sp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="@color/black">
++  <path
++      android:fillColor="@android:color/black"
++      android:pathData="M20,11H7.83l5.59,-5.59L12,4l-8,8 8,8 1.41,-1.41L7.83,13H20v-2z"/>
++</vector>
