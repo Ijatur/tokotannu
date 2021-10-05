@@ -52,11 +52,12 @@ public class Tambah_Barang extends AppCompatActivity {
                 String sSupplier = supplier.getText().toString();
                 String sEmail = email.getText().toString();
 
-                reference = FirebaseDatabase.getInstance().getReference().child("Request");
+                reference = FirebaseDatabase.getInstance("https://toko-zakaria-5ecd7-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
+
 
                 getValue();
 
-                if (sNama.equals("") || sHarga.equals("") || sStock.equals("") || sSupplier.equals("") || sEmail.equals("")) {
+                if (sNama.equals("") || sHarga.equals("") || /*sStock.equals("") ||*/ sSupplier.equals("") || sEmail.equals("")) {
                     Toast.makeText(Tambah_Barang.this, "Data Tidak boleh kosong",
                             Toast.LENGTH_LONG).show();
                 } else {
@@ -64,7 +65,7 @@ public class Tambah_Barang extends AppCompatActivity {
                     nama.setText("");
                     harga.setText("");
                     stock.setText("");
-                    sold.setText("");
+                    /*sold.setText("");*/
                     supplier.setText("");
                     email.setText("");
                     Toast.makeText(Tambah_Barang.this, "Data Tersimpan", Toast.LENGTH_LONG).show();
@@ -79,7 +80,7 @@ public class Tambah_Barang extends AppCompatActivity {
         req.setNama(nama.getText().toString());
         req.setHarga(harga.getText().toString());
         req.setStock(stock.getText().toString());
-        req.setSold(sold.getText().toString());
+        /*req.setSold(sold.getText().toString());*/
         req.setSupplier(supplier.getText().toString());
         req.setEmail(email.getText().toString());
     }

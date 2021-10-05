@@ -26,7 +26,7 @@ public class Barang extends AppCompatActivity {
         actionBar.setTitle("Barang");
 
         /*floating action button*/
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.tambahbrg);
         fab.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), Tambah_Barang.class);
             startActivity(intent);

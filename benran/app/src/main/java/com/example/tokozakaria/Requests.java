@@ -1,11 +1,11 @@
 package com.example.tokozakaria;
 
 public class Requests {
-    public String ID;
+    /*public String ID;*/
     public String nama;
     public String harga;
     public String stock;
-    public String sold;
+    /*public String sold;*/
     public String supplier;
     public String email;
 
@@ -20,21 +20,21 @@ public class Requests {
 
     }
 
-    public String getSold() {
+  /*  public String getSold() {
         return sold;
     }
 
     public void setSold(String sold) {
         this.sold = sold;
-    }
+    }*/
 
-    public String getID() {
+/*    public String getID() {
         return ID;
     }
 
     public void setID(String ID) {
         this.ID = ID;
-    }
+    }*/
 
     public String getNama() {
         return nama;
