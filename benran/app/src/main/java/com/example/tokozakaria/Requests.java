@@ -8,15 +8,18 @@ public class Requests {
     /*public String sold;*/
     public String supplier;
     public String email;
+    public String kategori;
 
 
     public Requests(){}
-    public Requests(String nama, String harga, String stock, String supplier, String email){
+    public Requests(String nama, String harga, String stock, String supplier, String email, String
+                    kategori, String invkategori){
         this.nama = nama;
         this.harga = harga;
         this.stock = stock;
         this.supplier = supplier;
         this.email = email;
+        this.kategori = kategori;
 
     }
 
@@ -75,6 +78,15 @@ public class Requests {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
+
     @Override
     public String toString()
     {
@@ -82,7 +94,8 @@ public class Requests {
                 ""+harga+"\n"+
                 ""+stock+"\n"+
                 ""+supplier+"\n"+
-                ""+email+"\n";
+                ""+email+"\n"+
+                ""+kategori+"\n";
     }
 
 }

@@ -34,7 +34,7 @@ public class Barang extends AppCompatActivity {
 
     }
 
-    /*coba appbar*/
+    /*appbar*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.barang_appbar, menu);

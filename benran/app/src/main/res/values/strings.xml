@@ -20,4 +20,17 @@
     <string name="supplier_information">Supplier Information</string>
     <string name="nama_supplier">Nama Supplier</string>
     <string name="emailatauhp">Email/No.Hp</string>
+    <string name="kategori">Kategori</string>
+    <string name="update">Update</string>
+    <string name="product_detail">Product Detail</string>
+    <string name="upload">Upload</string>
+    <string-array name="kategori">
+        <item>Pilih Kategori</item>
+        <item>Beras</item>
+        <item>Gula</item>
+        <item>Sagu</item>
+        <item>Minyak</item>
+        <item>Terigu</item>
+        <item>Lainnya</item>
+    </string-array>
 </resources>
